@@ -10,11 +10,13 @@ to the dummy data via the dbus. See example.
 
 https://github.com/victronenergy/dbus_vebus_to_pvinverter/tree/master/test
 """
-from gi.repository import GLib
-import platform
+import argparse
 import logging
-import sys
 import os
+import platform
+import sys
+
+from gi.repository import GLib
 
 # our own packages
 sys.path.insert(1, os.path.join(os.path.dirname(__file__), "../ext/velib_python"))

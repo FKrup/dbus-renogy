@@ -1,13 +1,14 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-import dbus.service
 import logging
-import traceback
 import os
+import traceback
 import weakref
 from collections import defaultdict
-from ve_utils import wrap_dbus_value, unwrap_dbus_value
+
+import dbus.service
+from ve_utils import unwrap_dbus_value, wrap_dbus_value
 
 # vedbus contains three classes:
 # VeDbusItemImport -> use this to read data from the dbus, ie import

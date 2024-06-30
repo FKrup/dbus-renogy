@@ -1,11 +1,12 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
+import logging
 import sys
-from traceback import print_exc
 from os import _exit as os_exit
 from os import statvfs
-from subprocess import check_output, CalledProcessError
-import logging
+from subprocess import CalledProcessError, check_output
+from traceback import print_exc
+
 import dbus
 
 logger = logging.getLogger(__name__)
@@ -83,7 +84,10 @@ def get_vrm_portal_id():
     # Fall back to getting our id using a syscall. Assume we are on linux.
     # Allow the user to override what interface is used using an environment
     # variable.
-    import fcntl, socket, struct, os
+    import fcntl
+    import os
+    import socket
+    import struct
 
     iface = os.environ.get("VRM_IFACE", "eth0").encode("ascii")
     s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
