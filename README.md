@@ -1,3 +1,5 @@
+> :construction: **CAUTION:** This project is currently under development and is not yet functional. Please check again later.
+
 # dbus-renogy
 
 This application enables communication with Renogy Rover Boost MPPT solar charge controllers. The data is made available on D-Bus, the internal data bus used in Venus OS, allowing for integration with the Venus OS GUI.
