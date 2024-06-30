@@ -1,0 +1,2 @@
+#!/bin/sh
+python /data/dbus-renogy/main.py
